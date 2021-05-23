@@ -1,0 +1,21 @@
+Ceci est un client F-Droid alternatif basé sur l'ancienne interface du client officiel (pre 1.0).
+Alors que la nouvelle interface du client est agréable, elle est parfois un peu bancale.
+Beaucoup d'informations qui étaient fournies clairement dans l'ancienne interface ne sont désormais plus disponibles, ou nécessites quelques clics supplémentaires.
+F-Droid Classic apporte les fonctionnalités de la version moderne 1.x de F-Droid à l'interface classique, ce qui inclut :
+
+* Prise en charge d'index-v1
+* Entrées en ligne des journaux de modifications
+* Métadonnées localisées
+* Captures d'écran
+
+Fonctionnalités à venir :
+
+* Meilleur prise en charge des miroirs
+
+Il ne prend pas en charge les fonctionnalités suivantes et ne le fera probablement jamais
+
+* Échange
+* Prise en charge d'index-v0 (ancien index basé sur xml)
+* Prise en charge pour Android < 4.4
+
+<b>Note :</b> Si vous souhaitez les versions bêta, vous pouvez activer le repo F-Droid Classic dans les paramètres du repo. Les futurs versions sont généralement disponible quelques jours avant leur intégration dans le référentiel principal F-Droid.

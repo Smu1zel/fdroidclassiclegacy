@@ -1,0 +1,4 @@
+* Affiche les captures d'écran !
+* Ajoute les moyens de faire un don manquants Liberapay et Open Collective
+* Affiche les liens de traduction pour les applications qui les ont spécifiées
+* Désactive le repo F-Droid Classic par défaut pour les nouvelles installations
