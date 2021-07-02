@@ -1,0 +1,4 @@
+* Screenshots werden anzeigt!
+* Fehlende Liberapay und Open Collective Spendenoptionen hinzugefügt
+* Übersetzungslinks für Anwendungen anzeigen welche diese angeben
+* Deaktivieren des F-Droid Classic repo per Voreinstellung für neue Installationen
