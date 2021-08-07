@@ -1,0 +1,5 @@
+* Implementeer repo force refresh en db reset opties (#33)
+* Optie toevoegen om een enkele repo te updaten vanuit de repository details
+* Bekijk apps van een enkele repo door de repository te selecteren in de categorie spinner
+* Bug fixes en vertaling verbeteringen
+* Vaste vertalingen die secundaire locale verkiezen boven primaire (met dank aan @spacecowboy)

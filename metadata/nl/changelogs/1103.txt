@@ -1,0 +1,4 @@
+* Screenshots weergeven!
+* Voeg ontbrekende Liberapay en Open Collective donatie opties
+* Toon vertalingen links voor apps die ze hebben opgegeven
+* Standaard uitschakelen van de F-Droid Classic repo voor nieuwe installaties
