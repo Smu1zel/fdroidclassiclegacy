@@ -1,0 +1,5 @@
+* Iomete pli bela Pri dialogo
+* Temo ŝanĝoj apliki tuj kaj ne nur sur # malanta? a butono.
+* Aldoni "Update ĉiuj" butonon en la menuo, # tio? i # ankora? povus esti iom buggy.
+* La # de? uto nuligi butono estas nun videbla en la nokta maniero. Ĝi estas ankaŭ iomete pli grandaj kaj havas ondeto efekto nun.
+* Fix kraŝo sur telefona boto

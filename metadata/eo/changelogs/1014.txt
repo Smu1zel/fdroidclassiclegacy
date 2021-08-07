@@ -1,0 +1,3 @@
+🎉 RELEASE 1.0 🎉
+
+* Fix app titolo en ĉiuj lingvoj

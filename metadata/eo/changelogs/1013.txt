@@ -1,0 +1,4 @@
+* Fix instali altgradigojn kiam ekzistas multoblaj apks subskribita de malsamaj ŝlosiloj (reproduktebla konstruas)
+* Fix fdroidrepos:// URIs foje ne estanta rekonita kiam aldonante nova repo
+* Aldoni rezerva config (ne provu rezerva kaŝmemoro apks)
+* Aldoni reto sekureco config (forto ĉiam uzanta https por kelkaj bone konataj urloj)

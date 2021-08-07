@@ -1,0 +1,5 @@
+* Efektivigi repo forto # refre? igi # kaj db ebloj reset (#33)
+* Aldoni opcio por ĝisdatigi ununura repo de la deponejo detaloj
+* Vidi apps de ununura repo de elektanta la deponejo de la kategorio spinner
+* Cimon fiksa kaj tradukado plibonigoj
+* Korektitaj tradukoj preferante jaro lokaĵaro super primara (danke al @spacecowboy)

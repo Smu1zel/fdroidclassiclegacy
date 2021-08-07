@@ -1,0 +1,5 @@
+* Ŝanĝo rangotabelo en serĉrezultoj preferas nomo kaj resumo matĉoj (dankon @gcbrown76)
+* Reveno ĵus ĝisdatigita listo de originala funkcio (ne inkluzivas lastatempe aldonitaj en la listo)
+* Fix kraŝo kiam provanta#? an? i la pasvorton por pasvorton protektita repo
+* Aldoni eblo por malfermi la sistemo app-info agordojn paĝo por instalita apps de F-Droid-klasikaĵo. Aŭ uzu la menueron aŭ longe-premi la app-ikono
+* Multa de interna kodo de pureco kaj dependeco ĝisdatigojn (dankon @TacoTheDank)
