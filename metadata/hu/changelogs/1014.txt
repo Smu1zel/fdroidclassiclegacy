@@ -1,0 +1,3 @@
+🎉 KIADÁS 1.0 🎉
+
+* Fix app cím minden nyelven

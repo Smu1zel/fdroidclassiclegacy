@@ -1,0 +1,4 @@
+* sok fejlesztés az AppDetails nézetben. (65807805858106ea868c7f90f675214ff120b6af3d a részletekért)
+* whatsnew szakasz hozzáadása
+* Az éjszakai téma mostantól valóban fekete háttérrel rendelkezik.
+* az új F-Droid gombstílus használata

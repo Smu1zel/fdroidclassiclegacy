@@ -1,0 +1,5 @@
+* Repo force refresh és db reset opció implementálása (#33)
+* Lehetőség hozzáadása egyetlen repó frissítésére a tároló részleteiből
+* Alkalmazások megtekintése egyetlen repóból a repó kiválasztásával a kategóriapörgetőből
+* Hibajavítások és fordítási javítások
+* Javítottuk a fordításokat, amelyek a másodlagos nyelvjárást preferálják az elsődleges nyelvjárással szemben (köszönet @spacecowboy-nak)

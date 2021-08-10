@@ -1,0 +1,5 @@
+* Kicsit szebb A párbeszédről                                                                                 
+* A témaváltoztatások azonnal érvényesek, és nem csak a vissza gombra.
+* "Mindent frissíteni" gomb hozzáadása a menühöz, ez még egy kicsit hibás lehet.
+* A letöltés leállítása gomb most már látható éjszakai üzemmódban. Valamivel nagyobb is lett, és most már hullámzó hatása is van.
+* A telefon indításakor bekövetkező összeomlás javítása
