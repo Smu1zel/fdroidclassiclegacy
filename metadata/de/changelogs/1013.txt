@@ -1,0 +1,4 @@
+* Behebt den Fehler bei der Installation von Upgrades, wenn mehrere mit unterschiedlichen Schlüsseln signierte Apks vorhanden sind (reproduzierbare Builds)
+* Behebt, dass fdroidrepos://-URIs manchmal nicht erkannt werden, wenn ein neues Repo hinzugefügt wird
+* Hinzufügen der Backup-Konfiguration (versucht nicht, zwischengespeicherte Apks zu sichern)
+* Netzwerksicherheitskonfiguration hinzugefügt (erzwingt immer die Verwendung von https für einige bekannte URLs)

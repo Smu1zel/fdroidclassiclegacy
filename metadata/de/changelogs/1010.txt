@@ -1,0 +1,5 @@
+* Etwas hübscherer Über-Dialog                                                                                 
+* Theme-Änderungen werden sofort übernommen und nicht erst beim Zurückgehen.
+* Hinzufügen eines "Alles aktualisieren"-Buttons zum Menü, dieser könnte noch etwas fehlerhaft sein.
+* Der Download-Abbruch-Button ist jetzt auch im Nachtmodus sichtbar. Außerdem ist er jetzt etwas größer und hat einen Ripple-Effekt.
+* Behebung eines Absturzes beim Hochfahren des Smartphones

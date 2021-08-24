@@ -1,0 +1,5 @@
+* Implementierung von Optionen zum Erzwingen der Aktualisierung von Repos und zum Zurücksetzen der Datenbank (#33)
+* Hinzufügen der Option, ein einzelnes Projektarchiv in den Projektarchivdetails zu aktualisieren
+* Anzeigen von Anwendungen aus einem einzelnen Projektarchiv durch Auswahl des Projektarchivs aus dem Kategorie-Spinner
+* Fehlerbehebungen und Verbesserungen der Übersetzung
+* Behobene Übersetzungen, die das sekundäre Gebietsschema dem primären vorziehen (Dank an @spacecowboy)
