@@ -1,5 +1,5 @@
-* Efektivigi repo forto # refre? igi # kaj db ebloj reset (#33)
-* Aldoni opcio por ĝisdatigi ununura repo de la deponejo detaloj
-* Vidi apps de ununura repo de elektanta la deponejo de la kategorio spinner
-* Cimon fiksa kaj tradukado plibonigoj
-* Korektitaj tradukoj preferante jaro lokaĵaro super primara (danke al @spacecowboy)
+• eblo devigi ĝisdatigi deponejon kaj forviŝi la datumbazon (#33)
+• eblo ĝisdatigi unuopan deponejon sur la ekrano de deponejaj detaloj
+• montri aplikaĵoj de unuopa deponejo per elekti la deponejon sur la etendebla menuo de kategorioj
+• erar-raparoj kaj tradukoj
+• riparita eraro pri montri enhavon en duaranga lingvo anstataŭ en unuaranga (danke al @spacecowboy)

@@ -1,4 +1,4 @@
-* Fix instali altgradigojn kiam ekzistas multoblaj apks subskribita de malsamaj ŝlosiloj (reproduktebla konstruas)
-* Fix fdroidrepos:// URIs foje ne estanta rekonita kiam aldonante nova repo
-* Aldoni rezerva config (ne provu rezerva kaŝmemoro apks)
-* Aldoni reto sekureco config (forto ĉiam uzanta https por kelkaj bone konataj urloj)
+• riparita eraro pri instali ĝisdatigojn kiam pluraj apk-dosieroj estas subskribitaj per malsamaj ŝlosiloj (reprodukteblaj kompilaĵoj)
+• riparita eraro pri ne rekoni ligilojn fdroidrepos:// dum aldoni novan deponejon
+• aldonita sekurkopia agordaro (ne provu sekurkopii kaŝmemorigitaj apk-dosierojn)
+• pliigita sekureco: ĉiam uzi https por kelkaj konataj retadresoj
