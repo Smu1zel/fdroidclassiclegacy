@@ -18,6 +18,8 @@
         <item name="android:textViewStyle">@style/TextViewStyle</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="colorOnSecondary">#ffffff</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogThemeDark</item>
+        <item name="android:colorControlActivated">@color/fdroid_green</item>
     </style>
 
     <style name="AppBaseThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -33,21 +35,20 @@
         <item name="toolbar_theme">@style/AppThemeLight.Toolbar</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="colorOnSecondary">#ffffff</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogThemeLight</item>
+        <item name="android:colorEdgeEffect">@color/fdroid_blue</item>
+        <item name="android:navigationBarColor">@android:color/background_light</item>
     </style>
 
     <style name="AppThemeDark" parent="AppBaseThemeDark">
-        <!-- customizations that are not API-level specific go here. -->
-        <item name="android:alertDialogTheme">@style/AlertDialogThemeDark</item>
-        <item name="android:colorControlActivated">@color/fdroid_green</item>
+        <!-- customizations that are API-level specific go here. -->
     </style>
 
     <style name="AppThemeLight" parent="AppBaseThemeLight">
-        <!-- customizations that are not API-level specific go here. -->
-        <item name="android:alertDialogTheme">@style/AlertDialogThemeLight</item>
-        <item name="android:colorEdgeEffect">@color/fdroid_blue</item>
+        <!-- customizations that are API-level specific go here. -->
     </style>
 
-    <style name="AppThemeNight" parent="AppThemeDark">
+    <style name="AppBaseThemeNight" parent="AppThemeDark">
         <!-- customizations that are not API-level specific go here. -->
         <item name="swipeRefreshLayoutProgressSpinnerBackgroundColor">@color/fdroid_night</item>
         <item name="detailPanel">@drawable/details_panel_donate_background_night</item>
@@ -56,6 +57,11 @@
         <item name="colorPrimaryDark">@color/fdroid_night_dark</item>
         <item name="android:windowBackground">@android:color/black</item>
     </style>
+
+    <style name="AppThemeNight" parent="AppBaseThemeNight">
+        <!-- customizations that are API-level specific go here. -->
+    </style>
+
 
     <style name="AlertDialogBaseThemeDark" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
