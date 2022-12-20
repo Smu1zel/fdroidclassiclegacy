@@ -3,7 +3,6 @@ package org.fdroid.fdroid.views.fragments;
 import android.net.Uri;
 
 import org.fdroid.fdroid.R;
-import org.fdroid.fdroid.compat.CursorAdapterCompat;
 import org.fdroid.fdroid.data.AppProvider;
 import org.fdroid.fdroid.views.AppListAdapter;
 import org.fdroid.fdroid.views.InstalledAppListAdapter;
@@ -17,7 +16,7 @@ public class InstalledAppsFragment extends AppListFragment {
 
     @Override
     protected AppListAdapter getAppListAdapter() {
-        return InstalledAppListAdapter.create(getActivity(), null, CursorAdapterCompat.FLAG_AUTO_REQUERY);
+        return InstalledAppListAdapter.create(getActivity(), null, 0);
     }
 
     @Override

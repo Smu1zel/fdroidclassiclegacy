@@ -71,7 +71,6 @@ import org.fdroid.fdroid.Preferences;
 import org.fdroid.fdroid.R;
 import org.fdroid.fdroid.UpdateService;
 import org.fdroid.fdroid.Utils;
-import org.fdroid.fdroid.compat.CursorAdapterCompat;
 import org.fdroid.fdroid.data.NewRepoConfig;
 import org.fdroid.fdroid.data.Repo;
 import org.fdroid.fdroid.data.RepoProvider;
@@ -130,7 +129,7 @@ public class ManageReposActivity extends AppCompatActivity
         setContentView(R.layout.repo_list_activity);
 
         final ListView repoList = findViewById(R.id.list);
-        repoAdapter = RepoAdapter.create(this, null, CursorAdapterCompat.FLAG_AUTO_REQUERY);
+        repoAdapter = RepoAdapter.create(this, null, 0);
         repoAdapter.setEnabledListener(this);
         repoList.setAdapter(repoAdapter);
         repoList.setOnItemClickListener((parent, view, position, id) -> {
