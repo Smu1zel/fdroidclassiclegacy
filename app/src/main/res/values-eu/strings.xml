@@ -286,7 +286,7 @@ Ez du baimen berezirik behar.</string>
     <string name="share_repository">Partekatu Biltegia</string>
     <string name="signed">Sinatuta :%s</string>
     <string name="app_installed_media">%s fitxategian instalatua</string>
-    <string name="download_all_updates">Eguneratu guztiak</string>
+    <string name="download_all_updates">Eguneraketak deskargatu</string>
     <string name="qr_code">QR-Code</string>
     <string name="repo_add_mirror">Gehitu ispilua</string>
     <string name="menu_appinfo">Aplikazioaren informazioa (sistemaren ezarpenak)</string>
@@ -322,5 +322,10 @@ Ez du baimen berezirik behar.</string>
     <string name="liberapay">Liberapay</string>
     <string name="opencollective">Open Collective</string>
     <string name="disable_pull_to_refresh">Desgaitu tira egin errefreskatzeko zeinua</string>
-    <string name="clear_cache_summary">Ezabatu eta berdeskargatzen du aplikazioaren informazio guztia</string>
+    <string name="clear_cache_summary">Ezabatu eta birdeskargatzen du aplikazioaren informazio guztia.</string>
+    <string name="build_type_bin">zabor ontzi</string>
+    <string name="pref_language_in_system_settings">Sistemaren ezarpenetan eskuragarri</string>
+    <string name="theme_follow_system">Sistemaren itxura jarraitu</string>
+    <string name="build_type_source">iturri</string>
+    <string name="clear_cache">Katxea garbitu eta freskatu</string>
 </resources>
