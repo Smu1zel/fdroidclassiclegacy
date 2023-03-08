@@ -1,0 +1,4 @@
+• riparita eraro pri instali ĝisdatigojn kiam pluraj apk-dosieroj estas subskribitaj per malsamaj ŝlosiloj (reprodukteblaj kompilaĵoj)
+• riparita eraro pri ne rekoni ligilojn fdroidrepos:// dum aldoni novan deponejon
+• aldonita sekurkopia agordaro (ne provu sekurkopii kaŝmemorigitaj apk-dosierojn)
+• pliigita sekureco: ĉiam uzi https por kelkaj konataj retadresoj

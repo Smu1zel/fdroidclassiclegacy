@@ -1,0 +1,5 @@
+• eblo devigi ĝisdatigi deponejon kaj forviŝi la datumbazon (#33)
+• eblo ĝisdatigi unuopan deponejon sur la ekrano de deponejaj detaloj
+• montri aplikaĵoj de unuopa deponejo per elekti la deponejon sur la etendebla menuo de kategorioj
+• erar-raparoj kaj tradukoj
+• riparita eraro pri montri enhavon en duaranga lingvo anstataŭ en unuaranga (danke al @spacecowboy)

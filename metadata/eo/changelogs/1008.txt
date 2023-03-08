@@ -1,0 +1,4 @@
+* lot de plibonigoj al AppDetails vido. (658078058106ea868c7f90f675214ff120b6af3d por detaloj)
+* aldoni whatsnew sekcio
+* Nokto Temo estos nun efektive havas nigran fonon
+* uzi la novan F-Droid butono stilo

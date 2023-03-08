@@ -1,0 +1,5 @@
+* Suchergebnisse: Änderung der Rangfolge. Bevorzugung von Namen und Zusammenfassungen (danke, @gcbrown76)
+* Rückkehr der kürzlich-aktualisiert-Liste zur vorherigen Funktionalität (neu hinzugefügte Projekte nicht in die Liste aufnehmen)
+* Behebt Absturz bei Passwortänderung eines geschützten Repos
+* Neue Funktion: Öffnen der App-Info-Seite für Apps aus F-Droidc classic (Menüeintrag oder lange auf App-Symbol drücken)
+* interne Codebereinigungen und Abhängigkeitsupgrades (danke, @TacoTheDank)

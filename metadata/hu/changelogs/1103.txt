@@ -1,0 +1,4 @@
+* Képernyőképek megjelenítése!
+* Add hiányzó Liberapay és Open Collective adományozási lehetőségek hozzáadása
+* Fordítási linkek megjelenítése az olyan alkalmazásokhoz, amelyekben ezek meg vannak adva
+* Az F-Droid Classic repo alapértelmezett kikapcsolása új telepítéseknél

@@ -1,0 +1,4 @@
+* Viele Verbesserungen in der AppDetails-Ansicht. (658078058106ea868c7f90f675214ff120b6af3d für Details)
+* Hinzufügen des Whatsnew-Bereichs
+* Das Nacht-Design hat nun tatsächlich einen schwarzen Hintergrund
+* Verwendung des neuen F-Droid-Button-Stils

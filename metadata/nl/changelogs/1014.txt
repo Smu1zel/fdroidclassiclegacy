@@ -1,0 +1,3 @@
+🎉 RELEASE 1.0 🎉
+
+* Herstel app titel in alle talen

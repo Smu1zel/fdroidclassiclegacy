@@ -1,0 +1,4 @@
+* A frissítések telepítésének javítása, ha több, különböző kulcsokkal aláírt apk van (reprodukálható buildek)
+* Az fdroidrepos:// URI-k néha nem kerülnek felismerésre új repo hozzáadásakor.
+* Backup config hozzáadása (ne próbáljon mentést készíteni a cache-elt apkokról)
+* Hálózati biztonsági konfiguráció hozzáadása (néhány jól ismert url esetén mindig a https használatát kényszeríti)

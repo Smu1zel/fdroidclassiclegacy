@@ -1,19 +1,19 @@
-Tio ĉi estas alternativa kliento F‑Droid bazita sur fasado de malnova oficiala kliento (antaŭ versio 1.0).
+Alternativa kliento F‑Droid bazita sur fasado de la malnova oficiala kliento (antaŭ la versio 1.0).
 Kvankam la nova fasado aspektas bele, ĝi estas iomete tro mallerta.
 Pluraj informoj klare liveritaj en la antaŭa fasado nun ne estas disponeblaj aŭ postulas kelkajn pliajn frapetojn.
 
-F‑Droid Klasika liveras eblaĵojn de la moderna versio 1.x de F‑Droid kun klasika fasado:
-* subteno por index-v1
-* ŝanĝoprotokoloj
-* tradukitaj metadatumoj
-* ekrankopioj
+F‑Droid Klasika liveras eblojn de la moderna versio 1.x de F‑Droid kun klasika fasado:
+• subteno por index-v1
+• ŝanĝoprotokoloj
+• tradukitaj metadatumoj
+• ekrankopioj
 
-Estontaj eblaĵoj:
-* pli bona subteno por spegul‑serviloj
+Estontaj ebloj:
+• pli bona subteno por spegul‑serviloj
 
-La jenaj eblaĵoj ne estas subtenataj (kaj probable neniam estos):
-* interŝanĝo de aplikaĵoj (“Proksime”)
-* subteno por index-v0 (malnova XML‑bazita indekso)
-* subteno por Android < 4.4
+La jenaj ebloj ne estas subtenataj (kaj probable neniam estos):
+• interŝanĝo de aplikaĵoj (“Proksime”)
+• subteno por index-v0 (malnova XML‑bazita indekso)
+• subteno por Android < 4.4
 
-<b>Rimarko:</b> se vi volas ricevi beta‑versiojn, aktivigu la deponejon “F-Droid Classic” en la menuo “deponejoj”. Stabilaj versioj kutime estas disponeblaj per tiu deponejo kelkaj tagoj antaŭ aperi en la oficiala deponejo de F‑Droid.
+<b>Rimarko:</b> se vi volas ricevi beta‑versiojn, aktivigu la deponejon “F-Droid Classic” en la menuo “Deponejoj”. Stabilaj versioj kutime estas disponeblaj per tiu deponejo kelkaj tagoj antaŭ aperi en la oficiala deponejo de F‑Droid.

@@ -1,4 +1,4 @@
-* montri ekrankopiojn
-* vidigi eblojn de donaco per Liberapay kaj Open Collective
-* montri ligilojn por traduki aplikaĵojn
-* malaktivigi la deponejon F-Droid Klasika por novaj instaloj
+• montri ekrankopiojn
+• vidigi eblojn de donaco per Liberapay kaj Open Collective
+• montri ligilojn por traduki aplikaĵojn
+• malaktivigi la deponejon “F-Droid Klasika” por novaj instaloj
