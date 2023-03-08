@@ -5,8 +5,8 @@ AuthorName: Marcus Hoffmann
 AuthorEmail: bubu@bubu1.eu
 SourceCode: https://git.bubu1.eu/Bubu/privext
 IssueTracker: https://git.bubu1.eu/Bubu/privext/issues
-Translation: https://weblate.bubu1.eu/projects/f-droid-classic/
-LiberapayID: '27855'
+Translation: https://translate.codeberg.org/projects/f-droid-classic/
+Liberapay: Bubu
 
 RepoType: git
 Repo: https://git.bubu1.eu/Bubu/privext
