@@ -377,5 +377,6 @@
     <string name="clear_cache">Clear Cache and Reload</string>
     <string name="build_type_source">source</string>
     <string name="build_type_bin">bin</string>
+    <string name="version_loading_placeholder">…</string>
 
 </resources>

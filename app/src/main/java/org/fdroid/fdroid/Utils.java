@@ -23,6 +23,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.StatFs;
 import android.text.Editable;
@@ -373,18 +374,27 @@ public final class Utils {
      * We fall back to the placeholder icon otherwise.
      */
     public static void setIconFromRepoOrPM(@NonNull App app, ImageView iv, Context context) {
-        if (app.getIconUrl(iv.getContext()) == null) {
+        setIconFromRepoOrPM(iv, app.getIconUrl(context), app.packageName);
+    }
+
+    public static void setIconFromRepoOrPM(ImageView iv, String iconUrl, String packageName) {
+        var context = iv.getContext();
+        if (iconUrl == null) {
             try {
-                iv.setImageDrawable(context.getPackageManager().getApplicationIcon(app.packageName));
+                iv.setImageDrawable(context.getPackageManager().getApplicationIcon(packageName));
             } catch (PackageManager.NameNotFoundException e) {
-                DisplayImageOptions options = Utils.getRepoAppDisplayImageOptions();
-                iv.setImageDrawable(options.shouldShowImageForEmptyUri()
-                        ? options.getImageForEmptyUri(FDroidApp.getInstance().getResources())
-                        : null);
+                iv.setImageDrawable(getDefaultIcon());
             }
         } else {
-            ImageLoader.getInstance().displayImage(app.getIconUrl(iv.getContext()), iv, Utils.getRepoAppDisplayImageOptions());
+            ImageLoader.getInstance().displayImage(iconUrl, iv, Utils.getRepoAppDisplayImageOptions());
         }
+    }
+
+    public static Drawable getDefaultIcon() {
+        var options = Utils.getRepoAppDisplayImageOptions();
+        return options.shouldShowImageForEmptyUri()
+                ? options.getImageForEmptyUri(FDroidApp.getInstance().getResources())
+                : null;
     }
 
     /**

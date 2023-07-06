@@ -10,14 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.fdroid.fdroid.FDroidApp;
+import org.fdroid.fdroid.LazyLoadingHelper;
 import org.fdroid.fdroid.R;
 import org.fdroid.fdroid.Utils;
 import org.fdroid.fdroid.data.App;
 
-public abstract class AppListAdapter extends CursorAdapter {
+public abstract class AppListAdapter extends CursorAdapter
+        implements LazyLoadingHelper.Callbacks<App, AppListAdapter.LazyViewData> {
 
     private LayoutInflater mInflater;
     private String upgradeFromTo;
+    private LazyLoadingHelper<App, LazyViewData> lazyLoadingHelper;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -34,6 +38,7 @@ public abstract class AppListAdapter extends CursorAdapter {
         mInflater = (LayoutInflater) context.getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
         upgradeFromTo = context.getResources().getString(R.string.upgrade_from_to);
+        lazyLoadingHelper = new LazyLoadingHelper<>(FDroidApp.getDatabaseExecutor(), app -> app.packageName);
     }
 
     protected abstract boolean showStatusUpdate();
@@ -46,6 +51,12 @@ public abstract class AppListAdapter extends CursorAdapter {
         TextView status;
         TextView license;
         ImageView icon;
+    }
+
+    static class LazyViewData {
+        String iconUrl;
+        String version;
+        String packageName;
     }
 
     @Override
@@ -76,11 +87,9 @@ public abstract class AppListAdapter extends CursorAdapter {
 
         holder.name.setText(app.name);
         holder.summary.setText(app.summary);
-
-        Utils.setIconFromRepoOrPM(app, holder.icon, holder.icon.getContext());
-
-        holder.status.setText(getVersionInfo(holder.status.getContext(), app));
         holder.license.setText(app.license);
+
+        lazyLoadingHelper.startLoading(view, app, this);
 
         // Disable it all if it isn't compatible...
         final View[] views = {
@@ -94,6 +103,30 @@ public abstract class AppListAdapter extends CursorAdapter {
         for (View v : views) {
             v.setEnabled(app.compatible);
         }
+    }
+
+    @Override
+    public LazyViewData lazyLoadData(App app) {
+        var context = FDroidApp.getInstance();
+        var data = new LazyViewData();
+        data.iconUrl = app.getIconUrl(context);
+        data.version = getVersionInfo(context, app);
+        data.packageName = app.packageName;
+        return data;
+    }
+
+    @Override
+    public void lazyBindViewPlaceholder(View view) {
+        var holder = (ViewHolder) view.getTag();
+        holder.status.setText(R.string.version_loading_placeholder);
+        holder.icon.setImageDrawable(Utils.getDefaultIcon());
+    }
+
+    @Override
+    public void lazyBindView(View view, LazyViewData data) {
+        var holder = (ViewHolder) view.getTag();
+        holder.status.setText(data.version);
+        Utils.setIconFromRepoOrPM(holder.icon, data.iconUrl, data.packageName);
     }
 
     private String getVersionInfo(Context context, App app) {
