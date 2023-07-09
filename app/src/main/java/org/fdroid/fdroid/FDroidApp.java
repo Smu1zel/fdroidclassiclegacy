@@ -73,6 +73,7 @@ public class FDroidApp extends MultiDexApplication {
     private static FDroidApp instance;
 
     private ExecutorService databaseExecutor;
+    private ExecutorService imageCacheExecutor;
 
     public void applyDialogTheme(Activity activity) {
         activity.setTheme(getCurDialogThemeResId());
@@ -189,6 +190,7 @@ public class FDroidApp extends MultiDexApplication {
         }
 
         databaseExecutor = Executors.newSingleThreadExecutor();
+        imageCacheExecutor = Executors.newFixedThreadPool(getThreadPoolSize());
 
         Preferences.setup(this);
         curTheme = Preferences.get().getTheme();
@@ -232,6 +234,7 @@ public class FDroidApp extends MultiDexApplication {
                 .defaultDisplayImageOptions(Utils.getDefaultDisplayImageOptionsBuilder().build())
                 .diskCache(diskCache)
                 .threadPoolSize(getThreadPoolSize())
+                .taskExecutorForCachedImages(imageCacheExecutor)
                 .build();
         ImageLoader.getInstance().init(config);
 
@@ -257,6 +260,10 @@ public class FDroidApp extends MultiDexApplication {
 
     public static ExecutorService getDatabaseExecutor() {
         return instance.databaseExecutor;
+    }
+
+    public static ExecutorService getImageCacheExecutor() {
+        return instance.imageCacheExecutor;
     }
 
     private static final LongSparseArray<String> lastWorkingMirrorArray = new LongSparseArray<>(1);

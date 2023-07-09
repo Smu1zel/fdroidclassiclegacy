@@ -37,6 +37,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import org.fdroid.fdroid.FDroidApp;
+import org.fdroid.fdroid.IconLoadingManager;
 import org.fdroid.fdroid.R;
 import org.fdroid.fdroid.Utils;
 import org.fdroid.fdroid.data.Apk;
@@ -76,8 +77,7 @@ public class InstallConfirmActivity extends FragmentActivity implements OnCancel
         TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 
         appName.setText(app.name);
-        ImageLoader.getInstance().displayImage(app.getIconUrl(this), appIcon,
-                Utils.getRepoAppDisplayImageOptions());
+        IconLoadingManager.getInstance().loadFromUrl(appIcon, app.getIconUrl(this));
 
         tabHost.setup();
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);

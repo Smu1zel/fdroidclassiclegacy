@@ -23,7 +23,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.StatFs;
 import android.text.Editable;
@@ -40,8 +39,6 @@ import androidx.annotation.Nullable;
 
 import com.google.common.hash.Hashing;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
 import org.fdroid.fdroid.data.App;
@@ -104,7 +101,6 @@ public final class Utils {
     };
 
     private static DisplayImageOptions.Builder defaultDisplayImageOptionsBuilder;
-    private static DisplayImageOptions repoAppDisplayImageOptions;
 
     private static Pattern safePackageNamePattern;
 
@@ -352,49 +348,13 @@ public final class Utils {
     }
 
     /**
-     * Gets the {@link DisplayImageOptions} instance used to configure
-     * {@link com.nostra13.universalimageloader.core.ImageLoader} instances
-     * used to display app icons.  It lazy loads a reusable static instance.
-     */
-    public static DisplayImageOptions getRepoAppDisplayImageOptions() {
-        if (repoAppDisplayImageOptions == null) {
-            repoAppDisplayImageOptions = getDefaultDisplayImageOptionsBuilder()
-                    .showImageOnLoading(R.drawable.ic_repo_app_default)
-                    .showImageForEmptyUri(R.drawable.ic_repo_app_default)
-                    .showImageOnFail(R.drawable.ic_repo_app_default)
-                    .displayer(new FadeInBitmapDisplayer(200, true, true, false))
-                    .build();
-        }
-        return repoAppDisplayImageOptions;
-    }
-
-    /**
      * If app has an iconUrl we feed that to UIL, otherwise we ask the PackageManager which will
      * return the app's icon directly when the app is installed.
      * We fall back to the placeholder icon otherwise.
      */
     public static void setIconFromRepoOrPM(@NonNull App app, ImageView iv, Context context) {
-        setIconFromRepoOrPM(iv, app.getIconUrl(context), app.packageName);
-    }
-
-    public static void setIconFromRepoOrPM(ImageView iv, String iconUrl, String packageName) {
-        var context = iv.getContext();
-        if (iconUrl == null) {
-            try {
-                iv.setImageDrawable(context.getPackageManager().getApplicationIcon(packageName));
-            } catch (PackageManager.NameNotFoundException e) {
-                iv.setImageDrawable(getDefaultIcon());
-            }
-        } else {
-            ImageLoader.getInstance().displayImage(iconUrl, iv, Utils.getRepoAppDisplayImageOptions());
-        }
-    }
-
-    public static Drawable getDefaultIcon() {
-        var options = Utils.getRepoAppDisplayImageOptions();
-        return options.shouldShowImageForEmptyUri()
-                ? options.getImageForEmptyUri(FDroidApp.getInstance().getResources())
-                : null;
+        var iconUrl = app.getIconUrl(context);
+        IconLoadingManager.getInstance().loadFromUrlOrPackage(iv, iconUrl, app.packageName);
     }
 
     /**

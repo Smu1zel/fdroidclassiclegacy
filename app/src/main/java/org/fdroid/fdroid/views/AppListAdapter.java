@@ -11,9 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.fdroid.fdroid.FDroidApp;
+import org.fdroid.fdroid.IconLoadingManager;
 import org.fdroid.fdroid.LazyLoadingHelper;
 import org.fdroid.fdroid.R;
-import org.fdroid.fdroid.Utils;
 import org.fdroid.fdroid.data.App;
 
 public abstract class AppListAdapter extends CursorAdapter
@@ -22,6 +22,7 @@ public abstract class AppListAdapter extends CursorAdapter
     private LayoutInflater mInflater;
     private String upgradeFromTo;
     private LazyLoadingHelper<App, LazyViewData> lazyLoadingHelper;
+    private IconLoadingManager iconLoadingManager;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -39,6 +40,7 @@ public abstract class AppListAdapter extends CursorAdapter
                 Context.LAYOUT_INFLATER_SERVICE);
         upgradeFromTo = context.getResources().getString(R.string.upgrade_from_to);
         lazyLoadingHelper = new LazyLoadingHelper<>(FDroidApp.getDatabaseExecutor(), app -> app.packageName);
+        iconLoadingManager = IconLoadingManager.getInstance();
     }
 
     protected abstract boolean showStatusUpdate();
@@ -119,14 +121,14 @@ public abstract class AppListAdapter extends CursorAdapter
     public void lazyBindViewPlaceholder(View view) {
         var holder = (ViewHolder) view.getTag();
         holder.status.setText(R.string.version_loading_placeholder);
-        holder.icon.setImageDrawable(Utils.getDefaultIcon());
+        holder.icon.setImageDrawable(iconLoadingManager.getDefaultIcon());
     }
 
     @Override
     public void lazyBindView(View view, LazyViewData data) {
         var holder = (ViewHolder) view.getTag();
         holder.status.setText(data.version);
-        Utils.setIconFromRepoOrPM(holder.icon, data.iconUrl, data.packageName);
+        iconLoadingManager.loadFromUrlOrPackage(holder.icon, data.iconUrl, data.packageName);
     }
 
     private String getVersionInfo(Context context, App app) {
