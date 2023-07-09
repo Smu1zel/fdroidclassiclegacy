@@ -46,6 +46,7 @@ public class AvailableAppsFragment extends AppListFragment implements
     private static int defaultCategoryID;
 
     private List<Category> categories;
+    private CategoryObserver categoryObserver;
 
     @Nullable
     private View categoryWrapper;
@@ -129,8 +130,10 @@ public class AvailableAppsFragment extends AppListFragment implements
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(adapter);
 
+        Utils.debugLog(TAG, "Adding category observer.");
+        categoryObserver = new CategoryObserver(adapter);
         getActivity().getContentResolver().registerContentObserver(
-                AppProvider.getContentUri(), false, new CategoryObserver(adapter));
+                AppProvider.getContentUri(), false, categoryObserver);
 
         categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -156,6 +159,15 @@ public class AvailableAppsFragment extends AppListFragment implements
 
         super.setUpPullToRefresh(view);
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        if (categoryObserver != null) {
+            Utils.debugLog(TAG, "Removing category observer.");
+            requireContext().getContentResolver().unregisterContentObserver(categoryObserver);
+        }
+        super.onDestroyView();
     }
 
     @Override
