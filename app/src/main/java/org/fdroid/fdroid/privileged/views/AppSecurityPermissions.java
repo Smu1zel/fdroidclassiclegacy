@@ -29,6 +29,7 @@ import android.content.pm.PermissionGroupInfo;
 import android.content.pm.PermissionInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Parcel;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -115,10 +116,11 @@ public class AppSecurityPermissions {
             super(info);
         }
 
+        @TargetApi(22)
         public Drawable loadGroupIcon(Context context, PackageManager pm) {
             Drawable iconDrawable;
             if (icon != 0) {
-                iconDrawable = loadUnbadgedIcon(pm);
+                iconDrawable = (Build.VERSION.SDK_INT < 22) ? loadIcon(pm) : loadUnbadgedIcon(pm);
             } else {
                 iconDrawable = ContextCompat.getDrawable(context, R.drawable.ic_perm_device_info);
             }
@@ -340,6 +342,7 @@ public class AppSecurityPermissions {
      * doesn't currently hold this permission. On older devices that don't support
      * this concept, permissions are never "new permissions".
      */
+    @TargetApi(16)
     private static boolean isNewPermission(PackageInfo installedPkgInfo, int existingFlags) {
         if (installedPkgInfo == null) {
             return false;
