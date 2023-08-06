@@ -107,13 +107,14 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 22
+        minSdkVersion 15
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1301
         applicationId myApplicationId
         resValue "string", "applicationId", myApplicationId
         versionName getVersionName()
+		multiDexEnabled true
         resConfigs "en", "ar", "ast", "bg", "ca", "cs", "da", "de", "el", "eo", "es", "et",
                 "eu", "fa", "fi", "fr", "gl", "he", "hi", "hr", "hu", "id", "is", "it",
                 "ja", "ko", "lt", "lv", "mk", "my", "nb", "nl", "pl", "pt-rBR", "pt-rPT", "ro",

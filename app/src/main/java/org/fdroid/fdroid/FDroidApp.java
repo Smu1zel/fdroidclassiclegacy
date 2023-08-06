@@ -20,7 +20,6 @@ package org.fdroid.fdroid;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -49,7 +48,7 @@ import java.io.IOException;
 import info.guardianproject.netcipher.NetCipher;
 import info.guardianproject.netcipher.proxy.OrbotHelper;
 
-public class FDroidApp extends Application {
+public class FDroidApp extends MultiDexApplication {
 
     private static final String TAG = "FDroidApp";
 
