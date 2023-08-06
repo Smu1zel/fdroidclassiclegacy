@@ -21,6 +21,7 @@ package org.fdroid.fdroid;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.os.Build;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.StrictMode;
@@ -236,11 +237,13 @@ public class FDroidApp extends MultiDexApplication {
      * parallel operations for fast icon loading.
      */
     private int getThreadPoolSize() {
-        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
-        if (activityManager != null) {
-            activityManager.getMemoryInfo(memInfo);
-            return (int) Math.max(1, Math.min(16, memInfo.totalMem / 256 / 1024 / 1024));
+        if (Build.VERSION.SDK_INT >= 16) {
+            ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+            ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
+            if (activityManager != null) {
+                activityManager.getMemoryInfo(memInfo);
+                return (int) Math.max(1, Math.min(16, memInfo.totalMem / 256 / 1024 / 1024));
+            }
         }
         return 2;
     }
