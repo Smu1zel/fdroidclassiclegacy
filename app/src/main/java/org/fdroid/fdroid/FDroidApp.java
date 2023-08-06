@@ -27,6 +27,7 @@ import android.os.StrictMode;
 import android.util.Log;
 
 import androidx.collection.LongSparseArray;
+import androidx.multidex.MultiDexApplication;
 
 import com.nostra13.universalimageloader.cache.disc.DiskCache;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;

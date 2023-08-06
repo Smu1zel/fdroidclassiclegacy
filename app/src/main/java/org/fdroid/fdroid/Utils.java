@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.StatFs;
 import android.text.Editable;
 import android.text.Html;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -153,7 +154,11 @@ public final class Utils {
             return 50 * 1024 * 1024; // just return a minimal amount
         }
         StatFs stat = new StatFs(statDir.getPath());
-        return stat.getAvailableBlocksLong() * stat.getBlockSizeLong();
+		        if (Build.VERSION.SDK_INT < 18) {
+            return (long) stat.getBlockCount() * (long) stat.getBlockSize();
+        } else {
+            return stat.getBlockCountLong() * stat.getBlockSizeLong();
+        }
     }
 
     public static long getImageCacheDirTotalMemory(Context context) {
@@ -165,7 +170,11 @@ public final class Utils {
             return 100 * 1024 * 1024; // just return a minimal amount
         }
         StatFs stat = new StatFs(statDir.getPath());
-        return stat.getBlockCountLong() * stat.getBlockSizeLong();
+		        if (Build.VERSION.SDK_INT < 18) {
+            return (long) stat.getBlockCount() * (long) stat.getBlockSize();
+        } else {
+            return stat.getBlockCountLong() * stat.getBlockSizeLong();
+        }
     }
 
     public static void copy(InputStream input, OutputStream output) throws IOException {
