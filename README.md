@@ -1,6 +1,6 @@
 ## F-Droid Classic Legacy
 
-This is a attempted backport of the F-Droid Classic client to pre-5.1. As of now, it is based on the latest version and is tested to work on as low as 4.3. It partially functions on 4.0, however doing virtually anything will either fail, look wrong, or crash the app.
+This is a backport of the F-Droid Classic client (by Bubu) to pre-5.1. As of now, it is based on the latest version and is tested to work on as low as 4.3. It partially functions on 4.0, however doing virtually anything will either fail, look wrong, or crash the app.
 
 ## License
 
